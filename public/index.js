@@ -16,6 +16,7 @@ const monthErrMesg = "Invalid Month!";
 const yearErrMesg = "Invalid Year!";
 
 const button = document.querySelector("form");
+const span = document.querySelectorAll("span");
 
 let date = new Date(); // get today full date
 let day = date.getDate(); // todays date
@@ -23,6 +24,13 @@ let month = date.getMonth() + 1; // current month
 let currentYear = date.getFullYear(); // current year
 
 const Months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]; // Array of days of months
+
+function animate() {
+  span.forEach((e) => {
+    e.className = "an";
+  });
+  // span[1].className = "an";
+}
 
 function validateDay() {
   let value = dayInput.value;
@@ -102,6 +110,8 @@ function calculateYears(e) {
   yearOutput.innerHTML = currentAgeYears + " ";
   monthOutput.innerHTML = currentAgeMonths + " ";
   dayOutput.innerHTML = currentAgeDays + " ";
+
+  animate();
 
   day = date.getDate(); // todays date
   month = date.getMonth() + 1; // current month

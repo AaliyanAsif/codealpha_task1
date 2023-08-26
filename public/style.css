@@ -39,6 +39,23 @@ span {
   color: hsl(259, 100%, 65%);
 }
 
+.an {
+  animation-name: example;
+  animation-duration: 3s;
+}
+
+@keyframes example {
+  from {
+    color: hsl(258, 17%, 88%);
+  }
+  to {
+    color: hsl(259, 75%, 41%);
+  }
+  to {
+    color: hsl(259, 100%, 65%);
+  }
+}
+
 input {
   border: solid 1px hsl(0, 0%, 86%);
   max-width: 5rem;
