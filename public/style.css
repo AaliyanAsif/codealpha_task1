@@ -90,7 +90,7 @@ input {
 }
 
 .flex-2 {
-  margin-bottom: 20px;
+  margin-bottom: 20px 0px;
 }
 
 .err {
@@ -106,6 +106,7 @@ input {
     border-radius: 10px;
     border-bottom-right-radius: 35%;
     padding: 20px;
+    position: relative;
   }
 
   input {
@@ -113,7 +114,34 @@ input {
     font-size: 15px;
   }
 
+  img {
+    max-width: 35%;
+  }
+
   hr {
-    width: 100%;
+    width: 90%;
+    position: absolute;
+  }
+
+  h1 {
+    font-size: calc(15px + 8vw);
+  }
+
+  .box {
+    margin: 0px;
+    max-width: 33%;
+  }
+
+  .flex {
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+
+  #btn {
+    z-index: 1;
+  }
+
+  .inline-block {
+    justify-content: center;
   }
 }
