@@ -29,7 +29,6 @@ function animate() {
   span.forEach((e) => {
     e.className = "an";
   });
-  // span[1].className = "an";
 }
 
 function validateDay() {
