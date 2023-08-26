@@ -82,7 +82,6 @@ function calculateYears(e) {
   var monthValue = document.getElementById("month").value; //month value
   var yearValue = document.getElementById("year").value; //year value
 
-  // validate(dayValue, monthValue, yearValue);
   if (!validateDay() || !validateMonth() || !validateYear()) {
     return;
   }
@@ -97,8 +96,6 @@ function calculateYears(e) {
     month = month + 12;
     currentYear = currentYear - 1;
   }
-  console.log(month);
-  // alert(monthValue);
 
   var currentAgeDays = day - dayValue;
   var currentAgeMonths = month - monthValue;
@@ -114,94 +111,3 @@ function calculateYears(e) {
 }
 
 button.addEventListener("submit", calculateYears);
-
-// var ageDate = new Date(diff);
-// var currentAgeYears = ageDate.getUTCFullYear() - 1970;
-// var currentAgeMonths = ageDate.getUTCMonth() + 1;
-// var currentAgeDays = ageDate.getUTCDay();
-
-// if (currentAgeMonths == 1 || 3 || 5 || 7 || 8 || 10 || 12) {
-//   var currentAgeDays = Math.floor(ageDays % 31);
-// } else if (currentAgeMonths == 2) {
-//   currentAgeDays = Math.floor(ageDays % 28);
-// } else {
-// }
-// var ageDays = Math.floor(currentAgeYears * 365.24);
-// var currentAgeDays = ageDays % 30;
-
-// var diff = today - birthday; //age in milliseocnds
-
-// var currentAgeYears = Math.floor(diff / 31556952000); // age in milliseconds/ by milliseconds in a year
-// var ageMonths = Math.floor(diff / 2629746000); // age in milisecond / by milliseconds in a month
-// var currentAgeMonths = ageMonths % 12; // remainder  total age in months / 12 to get age in current year's month
-// var ageDays = diff / 86400000; // age in milisecond / by milliseconds in a day
-
-// currentAgeDays = Math.floor(ageDays % 30); // this is where i need help what logic can i use for days
-
-// var birthday = new Date(yearValue, monthValue - 1, dayValue); // birthday in milliseconds
-// var today = Date.now(); // todays in milliseconds
-
-// if (!day) {
-//   dayError.innerHTML = EmptyErrMesg;
-// }
-// if (!month) {
-//   monthErr.innerHTML = EmptyErrMesg;
-
-// else if (month > 12) {
-//       monthInput.style.borderColor = "red";
-//       monthErr.innerHTML = monthErrMesg;
-//       validator = false;
-//     } else if (dayInp.value > 31) {
-//       dayInput.style.borderColor = "red";
-//       dayError.innerHTML = dayErrMesg;
-//       validator = false;
-//     }
-
-//  inputs.forEach((i) => {
-//     const parent = i.parentElement;
-//     if (!i.value) {
-//       i.style.borderColor = "red";
-//       parent.querySelector(".err").innerText = "this field is required.";
-//       validator = false;
-//     }
-//   });
-//   if (day < 1 || day > 31) {
-//     dayInput.style.borderColor = "red";
-//     dayError.innerHTML = dayErrMesg;
-//     validator = false;
-//     console.log(validator);
-//   }
-// else if (month < 1 || month > 12) {
-//   monthInput.style.borderColor = "red";
-//   monthErr.innerHTML = monthErrMesg;
-//   validator = false;
-// }
-//  else if (year > currentYear) {
-//   yearInput.style.borderColor = "red";
-//   yearErr.innerHTML = yearErrMesg;
-//   validator = false;}
-
-// function validate(day, month, year) {
-//   let validator;
-//   if (day == "") {
-//     dayInput.style.borderColor = "red";
-//     dayError.innerHTML = EmptyErrMesg;
-//     validator = false;
-//   }
-//   if (month == "") {
-//     monthInput.style.borderColor = "red";
-//     monthErr.innerHTML = EmptyErrMesg;
-//     validator = false;
-//   }
-//   if (year == "") {
-//     yearInput.style.borderColor = "red";
-//     yearErr.innerHTML = EmptyErrMesg;
-//     validator = false;
-//   } else {
-//     dayInput.style.borderColor = "black";
-//     dayError.innerText = "";
-//     validator = true;
-//   }
-
-//   return validator;
-// }
