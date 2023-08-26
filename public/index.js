@@ -86,8 +86,6 @@ function calculateYears(e) {
     return;
   }
 
-  console.log("1 " + month);
-
   if (dayValue > day) {
     day = day + Months[month - 1];
     month = month - 1;
