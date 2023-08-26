@@ -26,11 +26,12 @@ const Months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]; // Array of day
 
 function validateDay() {
   let value = dayInput.value;
+  let monthvalue = monthInput.value;
   if (value == "") {
     dayInput.style.borderColor = "red";
     dayError.innerHTML = EmptyErrMesg;
     return false;
-  } else if (value < 1 || value > 31) {
+  } else if (value > Months[monthvalue - 1] || value < 1) {
     dayInput.style.borderColor = "red";
     dayError.innerHTML = dayErrMesg;
     return false;
