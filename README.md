@@ -6,6 +6,12 @@
 
 **To do this project, you need a decent understanding of HTML, CSS and JavaScript.**
 
+## Live site
+
+Here is a live site for the project for you to try out!
+
+- https://aaliyanasif.github.io/age-calculator/
+
 ## The project
 
 Your users are able to:
@@ -91,9 +97,5 @@ function validateDay() {
 }
 ```
 
-## Live site
 
-Here is a live site for the project for you to try out!
-
-- https://aaliyanasif.github.io/age-calculator/
 
